@@ -10,17 +10,31 @@
         Each click generates random number 1-12
 */
 
+// Variables
+    var randNumber = ""; 
+    var red= "";
 
-$(document).ready(function() {
 
-var randNumber = ""; 
+
+// That document.ready thing to make the page load first.
+    $(document).ready(function() {
 
 // General RNG function
-    function rngTime (min, max) {
+    function rngTime(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+    }  
 
-    randNumber= console.log (rngTime(19, 120)
+// Crystal RNG function
+$("img").click(function() {
+    console.log (rngTime(1, 12))
+
+});
+
+
+
+      
+        $("#randNumber").html (console.log (rngTime(19, 120)))
+
 /*
 // Beginning conditions
     function gameStart() {

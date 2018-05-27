@@ -18,7 +18,7 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
         <!--Javascript-->
-            <script src="assets/javascript/game.js"></script>
+            <script type="text/javascript" script src="assets/javascript/game.js"></script>
 
 </head>
 
@@ -56,11 +56,11 @@
         </div>
 
         <!--Crystals row-->
-        <div class="row" "crystals">
-            <img class"img-responsive" "col-3" "well" src="assets/images/red-crystal.jpg" alt="red-crystal" id="red">
-            <img class"img-responsive" "col-3" "well" src="assets/images/orange-crystal.jpg" alt="orange-crystal" id="orange">
-            <img class"img-responsive" "col-3" "well" src="assets/images/green-crystal.jpg" alt="green-crystal" id="green">
-            <img class"img-responsive" "col-3" "well" src="assets/images/blue-crystal.jpg" alt="blue-crystal" id="blue">
+        <div class="row" >
+            <img class"img-responsive" "col-3" "well" "crystals" src="assets/images/red-crystal.jpg" alt="red-crystal" id="red">
+            <img class"img-responsive" "col-3" "well" "crystals" src="assets/images/orange-crystal.jpg" alt="orange-crystal" id="orange">
+            <img class"img-responsive" "col-3" "well" "crystals" src="assets/images/green-crystal.jpg" alt="green-crystal" id="green">
+            <img class"img-responsive" "col-3" "well" "crystals" src="assets/images/blue-crystal.jpg" alt="blue-crystal" id="blue">
         </div>
     
         <!--Scoreboard-->
@@ -69,15 +69,6 @@
             <h3 class= "text-center">Losses: <span id="loseTally"> 0 </span> </h3>
         </div>
     </div>
-
-<script>
-      function rngTime (min, max) {
-        return Math.floor(Math.random() * (max-min)) + min;
-        console.log (rngTime (19, 120))
-    }
-
-
-</script>
 
 </body>
 
