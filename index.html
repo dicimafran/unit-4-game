@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Crystal Collector game</title>
+
+        <!--CSS-->
+            <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+        <!--Bootstrap-->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+
+        <!--Fonts-->
+            <link href="https://fonts.googleapis.com/css?family=Eagle+Lake" rel="stylesheet">
+
+
+        <!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!--Javascript-->
+            <script src="assets/javascript/game.js"></script>
+
+</head>
+
+<body>
+    <!--Jumbotron and Rules-->
+    <div class ="container">
+        <div class="jumbotron"> <h1>Crystal Collector</h1>
+    </div>
+
+    <div class="container" id="gameRules">
+        <p>I shall give you a random number at the start of the game.</p>
+        <p>There are four crystals below. By clicking on a crystal, you are adding a specific amount of points to your total score.</p>
+        <p>You win the game by matching your total score to the random number, but beware! If your score is above the random number, you lose.</p>
+        <p>The value of each crystal is hidden from you until you click on it.</p>
+        <p>Each time the game starts, the game will change the value of each crystal.</p>
+    </div>
+
+
+    <!--Random number, user score, and crystals section-->
+    <div class="container">
+        
+        <!--Computer Number vs User score row-->
+        <div class="row">  
+            <!--Computer number area-->
+            <div class= "col-6" "well" id="compNumber" > 
+                <h2 class= "text-center"> Random Number </h2>
+                <h3 class= "text-center" id= "randNumber"> 0 </h3>
+            </div>
+            
+            <!--User score area-->
+            <div class="col-6" "well" id="userScoreBoard">
+                 <h2 class= "text-center"> Your total score is:</h2>
+                <h3 class= "text-center"> <span id="userScore"> 0 </h3> </span>
+            </div>
+        </div>
+
+        <!--Crystals row-->
+        <div class="row" "crystals">
+            <img class"img-responsive" "col-3" "well" src="assets/images/red-crystal.jpg" alt="red-crystal" id="red">
+            <img class"img-responsive" "col-3" "well" src="assets/images/orange-crystal.jpg" alt="orange-crystal" id="orange">
+            <img class"img-responsive" "col-3" "well" src="assets/images/green-crystal.jpg" alt="green-crystal" id="green">
+            <img class"img-responsive" "col-3" "well" src="assets/images/blue-crystal.jpg" alt="blue-crystal" id="blue">
+        </div>
+    
+        <!--Scoreboard-->
+        <div class="col-12" "well" id="scoreboard">             
+            <h3 class= "text-center">Wins: <span id="winTally"> 0 </span></h3>
+            <h3 class= "text-center">Losses: <span id="loseTally"> 0 </span> </h3>
+        </div>
+    </div>
+
+<script>
+      function rngTime (min, max) {
+        return Math.floor(Math.random() * (max-min)) + min;
+        console.log (rngTime (19, 120))
+    }
+
+
+</script>
+
+</body>
+
+</html> 
