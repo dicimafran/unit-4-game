@@ -10,7 +10,7 @@
         Each click generates random number 1-12
 */
 
-// Variables
+// Global Variables
     var userScore= 0;
     var wins= 0;
     var losses= 0;
@@ -19,30 +19,30 @@
     $(document).ready(function() {
 
 //General functions
+    // RNG template
     function rngTime(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }  
 
-// General RNG function followed by sub-RNGs
-    
-    // Random Number RNG
+    // Pre-set random Number
     var randNumber = rngTime(19, 120); 
     $("#randNumber").html(randNumber)
     
+    // Random number function
     function randomNumberGet() {
         var randNumber = rngTime(19, 120); 
         $("#randNumber").html(randNumber)
     }
   
-
-    // Crystal RNG function and userscore
+// The meat of the game.
+    // Crystal RNG function and userscore updates with each click.
         $("img").click(function() {
             cp= rngTime(1, 12)
             console.log("The cp is "+ cp)
             userScore= userScore + cp
             $("#userScore").html(userScore)
 
-    // Win and lose conditions
+    // Win and lose conditions with resets to userscore and random number.
             
         if (randNumber == userScore) {
             wins= wins+= 1;
