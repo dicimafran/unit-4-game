@@ -34,13 +34,13 @@
     randomNumberGet();
   
 // The meat of the game.
-    // Crystal RNG function and userscore updates with each click.
+    // Crystal RNG function and userscore updates with each click. Also, cp means crystal points.
         $("img").click(function() {
+            console.log ("The random number is " + randNumber)
             cp= rngTime(1, 12)
             console.log("The cp is "+ cp)
             userScore= userScore + cp
             console.log("The userscore is " + userScore)
-            console.log ("The random number is " + randNumber)
             $("#userScore").html(userScore)
 
     // Win and lose conditions with resets to userscore and random number.
