@@ -26,9 +26,15 @@
 // General RNG function followed by sub-RNGs
     
     // Random Number RNG
+    var randNumber = rngTime(19, 120); 
+    $("#randNumber").html(randNumber)
+    
+    function randomNumberGet() {
         var randNumber = rngTime(19, 120); 
         $("#randNumber").html(randNumber)
+    }
   
+
     // Crystal RNG function and userscore
         $("img").click(function() {
             cp= rngTime(1, 12)
@@ -44,6 +50,7 @@
             $("#winTally").html(wins)
             userScore = 0;
             $("#userScore").html(userScore)
+            randomNumberGet();
         }
 
         if (userScore > randNumber) {
@@ -52,6 +59,7 @@
             $("#loseTally").html(losses)
             userScore = 0;
             $("#userScore").html(userScore)
+            randomNumberGet();
         }
             
         });
