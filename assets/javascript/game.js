@@ -40,6 +40,7 @@
             console.log("The cp is "+ cp)
             userScore= userScore + cp
             console.log("The userscore is " + userScore)
+            console.log ("The random number is " + randNumber)
             $("#userScore").html(userScore)
 
     // Win and lose conditions with resets to userscore and random number.
