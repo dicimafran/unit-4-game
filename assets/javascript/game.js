@@ -14,6 +14,7 @@
     var userScore= 0;
     var wins= 0;
     var losses= 0;
+    var randNumber = 0;
 
 // That document.ready thing to make the page load first.
     $(document).ready(function() {
@@ -24,15 +25,13 @@
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }  
 
-    // Pre-set random Number
-    var randNumber = rngTime(19, 120); 
-    $("#randNumber").html(randNumber)
-    
     // Random number function
     function randomNumberGet() {
-        var randNumber = rngTime(19, 120); 
+        randNumber = rngTime(19, 120); 
         $("#randNumber").html(randNumber)
     }
+
+    randomNumberGet();
   
 // The meat of the game.
     // Crystal RNG function and userscore updates with each click.
@@ -40,6 +39,7 @@
             cp= rngTime(1, 12)
             console.log("The cp is "+ cp)
             userScore= userScore + cp
+            console.log("The userscore is " + userScore)
             $("#userScore").html(userScore)
 
     // Win and lose conditions with resets to userscore and random number.
