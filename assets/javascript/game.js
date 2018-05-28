@@ -47,7 +47,7 @@
             
         if (randNumber == userScore) {
             wins= wins+= 1;
-            console.log(wins)
+            console.log("You won "+ wins + " time(s)")
             $("#winTally").html(wins)
             userScore = 0;
             $("#userScore").html(userScore)
@@ -56,7 +56,7 @@
 
         if (userScore > randNumber) {
             losses= losses+= 1;
-            console.log(losses)
+            console.log("You lost " + losses + " time(s)")
             $("#loseTally").html(losses)
             userScore = 0;
             $("#userScore").html(userScore)
